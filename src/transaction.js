@@ -27,6 +27,10 @@ function Transaction () {
   this.ins = []
   this.outs = []
   this.joinsplits = []
+  this.zcash = true;
+  this.version = Math.max((this.version||3), 3);
+  this.versionGroupId=0x03c48270;
+  this.expiry=0;
 }
 
 Transaction.prototype.setOverwinter = function (expiry, versionGroupId, version) {
